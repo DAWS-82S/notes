@@ -4,7 +4,7 @@ R -> 4
 W -> 2
 X -> 1
 
-- 		rw- 					r-- 			r-- 	ec2-user ec2-user
+- 		            rw- 					  r-- 			  r-- 	ec2-user ec2-user
 file    <owner-who-created>     <group>			<others>
 
 ec2-user --> Owner --> Read and Write
