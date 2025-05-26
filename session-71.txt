@@ -1,0 +1,65 @@
+DevOps --> build and deploy
+
+DevSecOps --> shift left
+
+SonarQube --> Onboard, tools team(GitHub, Jenkins, SonarQube, Veracode, etc.)
+1. plugin install, sonarqube scanner, sonarqube server configure
+implement in the pipeline --> 1 month
+
+2. Quality gates setup --> 3 months time
+3. We started failing the pipelines --> 2 months
+
+DAST --> Veracode
+we found out critical issues regarding TLS versions, all our AWS listeners were in TLS-1.1 When I found these we upgraded TLS1.3 in listener security policy so high and critical issues were filtered
+
+ECR image scans were not enabled earlier, recently we enabled and started scanning all the images and fixing the images by updating critical packages in Dockerfile. I implemented all the docker best practices
+
+We enabled dependabot to scan the libraries, we forced developers to update the libraries to solve critical and high priority issues
+
+We forced developers to write unit test cases with min coverage of 80% we ensured this in SonarQube Quality Gates...
+
+Jenkins Shared Libraries
+========================
+These are centralised pipelines based on DRY principle, dont repeat yourself. instead of maintaining pipelines for each and every project we can create pipelines as libraries so that it can be extended by multiple projects. updating the pipelines is very easy since those centralised. enforcing best standards can be acheived....
+
+We developed multiple pipelines based on programming language and deployment platform. for example we have nodejsVMPipeline, nodeEKSPipeline. Any new project they can just call our pipelines at run time. 
+
+We had normal pipelines earlier. We recently upgraded multi branch pipeline to support feature brnaching strategy. 
+
+developers start the development in feature, for every commit they push to central repo we trigger the feature pipeline automatically. this pipeline is based on shift left. We clone the repo, install dependencies, all types of scans, unit testing, deploy the application in development environment.
+
+build once in DEV and run anywhere by changing the configuration. Once application is scanned, unit tested and functional tested in DEV environment. developers raise pull request from feature to main branch... We need to deploy application in QA environment
+
+We are doing helm deployments, we have different values file for different environment
+
+DEV environment --> unit tests and functional tests
+QA environment --> integration tests will be configured
+
+100 --> 50 to 60 test cases are automated
+
+JUN 09th 02:00AM
+CR process --> change release process
+
+JIRA, Service now --> ticketing tool
+CR tool --> open source, internally developed
+
+CR request raise atleast 3 days before --> green
+deployment time
+version
+approval
+what changes are going
+if failed, how do you retreive
+scan results
+test results --> functional, regression, integration, etc..
+
+first approval --> team lead
+next approval --> delivery/release manager
+next approval --> client
+
+prod deployment  button  will be enabled exactly at 02:00AM. deployment window may be 2hours.
+
+if success --> inform all stakeholders. ask dev team to run sanity test cases...then developement team send everything ok in email
+
+if failure --> make sure it is reverted to previous version. then raise an incident. preare RCA, lessons learnt, how can you prevent these failures in future.
+
+

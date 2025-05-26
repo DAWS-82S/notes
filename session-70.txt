@@ -1,0 +1,29 @@
+DAST
+
+when application is running is there any chance to attack. when app is pre-prod stage we can use few tools like veracode. We provide our application URL and scan it. veracode sends the attacks and give us report
+
+before going to PROD, we do this scan once, get the report and attach to release process for approval...
+
+Image scan
+=============
+We are using ECR scan, if there are any critical like base image upgrade or packages upgrade we do it from changing the Dockerfile
+
+Opensource scan
+=============
+we are using github dependabot, if there are any ciritical issues to be cleared we will stop the build, usually issues when developers are using old dependency versions, we force to update to new versions and official libraries only.
+
+Jenkins Shared Librarires
+=========================
+DRY --> Ansible Roles, Terraform Modules...
+
+Programming Language			Deployment Platform
+Nodejs								EKS
+
+nodeJSEKS --> all projects with these combination can follow same standards
+nodeJSVM
+nodeJSPCF
+
+Map key --> Value
+
+
+nodeJSEKSPipeline.runPipeline()

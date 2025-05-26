@@ -1,0 +1,39 @@
+Monitoring
+==============
+Whitebox monitoring --> we know the internal details of the systems. metrics, data points, errors, traffic, etc...
+Blackbox monitoring --> as an end user checking the systems are working fine or not
+
+4 golden signals of monitoring
+
+Latency --> time to get response --> less latency is preferred
+Traffic --> number of requests to our system
+Errors --> Especially 500 errors
+Saturation --> resources of servers should be measured
+
+Time Series Database
+====================
+timestamp, value of that metric at that timestamp
+
+Quarterly, half yearly, yearly, weekly, daily
+
+Prometheus
+
+
+[Unit]
+Description=Prometheus Monitoring System
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=prometheus
+ExecStart=/opt/prometheus/prometheus --config.file=/opt/prometheus/prometheus.yml
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
+
+CC cameras
+=============
+cc cameras are agents --> central monitoring servers
+
