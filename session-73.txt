@@ -1,0 +1,57 @@
+region
+Monitoring --> true
+
+1. Setting the tag as Monitoring --> true
+2. Prometheus server should have describe ec2 instances permission...
+
+P0, P1, P2, P3, P4
+SLA --> Service level agreement
+P0 --> SLA --> 30-60min
+P1 --> SLA --> 60-120min
+P2 --> SLA  --> 4-8hr
+P3 --> SLA --> 2 days
+P4 --> SLA --> 4 days
+
+Raise an alert and trigger emails, teams chat, jira incidents, etc..
+
+rules will create alerts, alert manager component can manage the alert
+
+Every scrape 15sec Rules evaluation --> Alert creation --> Alert Firing to alertmanager
+
+Email Config
+===============
+
+
+defaults
+auth           on
+tls            on
+tls_trust_file /etc/ssl/certs/ca-bundle.crt
+logfile        /var/log/msmtp.log
+
+account        gmail
+host           smtp.gmail.com
+port           587
+from           your_email@gmail.com
+user           your_email@gmail.com
+password       your_app_password
+
+account default : gmail
+
+
+{
+echo "To: your-to-mail"
+echo "Subject: prometheus mail testing"
+echo "Content-Type: text/html"
+echo ""
+echo "prometheus mail testing"
+} | msmtp "your-to-mail"
+
+counter and gauge
+=================
+200GB
+01-MAY --> 0
+02-MAY --> 2GB
+03-MAY --> 3GB
+30-MAY --> 145GB
+
+01-JUN --> reset to 0
