@@ -1,0 +1,68 @@
+3 Tier
+===========
+Load Balancer --> Frontend Server --> Backend --> DB
+
+MongoDB
+============
+NoSQL Database --> Collections and documents --> Json
+SQL --> mySQL, MSSQL, Postgress, Oracle, etc. --> tables and columns
+
+Products --> NoSQL
+
+{
+	"id": 1234,
+	"descripton": ""
+}
+
+Redis
+=============
+in memory cache database
+
+Data --> Disk --> RAM --> User
+Data is stored in RAM
+Key -> Value
+
+Applications --> DB
+Applications --> Cache --> DB
+
+RabbitMQ
+==============
+Queue/Topic kind of database
+
+Synchronous and Asynchronous
+
+https://daws82s.online
+
+Synchronous
+============
+request expects immidiate response
+if no response with in time limit it will be error
+
+Asynchronous
+=============
+Mobile-1 --> Mobile-2
+
+Mobile-2 is offline for 1 hour.
+After 1 hour mobile-2 is online
+
+1. fire and forget
+2. no need to wait for response, messages will be delivered when other system is online.
+3. messages will be stayed in the queue until other system conusmes
+
+1. point to point communication --> Queue
+2. topic and subscribe communication --> one to many
+
+Amazon --> Ekart
+
+Amzon sends order details to Ekart Queue
+
+127.0.0.1 --> localhost
+
+Programming language
+======================
+nodejs --> .js
+build tool --> npm
+build file --> package.json
+
+
+
