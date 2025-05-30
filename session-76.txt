@@ -1,0 +1,12 @@
+1. Write Dockerfile
+2. Create image
+3. Push image to ECR
+4. Deploy into EKS through Helm
+
+helm
+	templates
+		deployment.yaml
+		service.yaml
+		configmap.yaml
+	values.yaml
+	Chart.yaml
