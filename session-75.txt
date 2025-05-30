@@ -1,0 +1,100 @@
+Structured --> MySQL tables and columns
+Unstructured  --> random folders,files, images, etc
+SemiStructured --> Log files
+
+MongoDB --> NoSQL
+Redis --> in memory, cache database
+MySQL
+RabbitMQ --> Asynchronous. fire and forget
+
+Java and dotnet --> enterprise application development
+nodejs, .net core, python, go, etc...
+
+OS --> Redhat, ubuntu, Suse, etc.. linux distros
+
+you need to install java --> you can install java seperatly and maven seperatly. if you install maven you can get java also
+
+when you install nodejs you are getting npm also
+nodejs --> programming language
+npm --> build command
+
+python programming and pip
+
+creating system users, system packages, application directories, permissions, etc..
+
+download code
+install dependencies
+.service files
+start the application
+
+Java
+==================
+source files --> .java
+build tool --> maven
+
+first we need to compile the code
+
+source code --> compile --> byte code(computer can understand easily)
+JDK, JRE
+JDK --> Java development kit. While developing you need this
+JRE --> Java runtime environment. You need this to run compiled/packaged applications
+
+JDK > JRE
+JDK = JRE + Extra utilities
+build file = pom.xml
+
+what pom.xml contains?
+
+project information. name, description, version, etc.
+dependencies
+
+groupId, artifactId and version
+
+first name --> ramesh
+last name --> sura
+dob
+adhar card, pan card, admission number
+
+HDFC bank
+===============
+LOB --> Savings, Current, Mobile banking, Stocks, Loans, etc...
+process is important than persons
+
+com.hdfc --> group id
+artifactId --> savings.internetbanking
+version --> 2.0
+
+com.hdfc.savings.internetbanking:2.0
+
+groupId, artifactId and version is the maven way of representing components inside project. for example com.hdfc is groupId, savings is artifactId and we can have version
+
+maven lifecycle
+===============
+mvn validate --> verify project structure
+mvn clean --> previous builds removal
+mvn compile --> source code compilation to bytecode
+mvn test --> unit test cases
+mvn package --> it creates target folder and keep .jar (Java Archieve file) inside
+package ==  validate+compile+test
+maven deploy --> install into local repository
+maven install --> push to central repository
+
+.msi a downloaded file in windows. it is a packaged file
+.iso
+
+maven lifecycle consists of different phases
+
+mvn validate --> verify project structure
+mvn clean --> previous builds removal
+mvn compile --> source code compilation to bytecode
+mvn test --> unit test cases
+mvn package --> it creates target folder and keep .jar (Java Archieve file) inside
+package ==  validate+compile+test
+maven deploy --> install into local repository
+maven install --> push to central repository
+
+monolithic --> .war file web archive file
+roboshop-backend --> catalogue+cart+user+payment+etc..
+
+legacy --> .ear file --> enterprise archive file
+frontend and backend
