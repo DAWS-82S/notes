@@ -1,0 +1,94 @@
+ArgoCD
+========
+Jenkins CICD
+
+CI
+===
+backend repo --> source code, Dockerfile --> developer
+clone -> build -> scans -> image push
+it will get the image tag
+
+CD
+===
+owner --> DevOps
+receive image tag
+dev/qa/prod
+clone CD repo
+
+helm --> templatise manifest files, package manager
+
+Chart.yaml
+values-dev.yaml
+values-qa.yaml
+values-prod.yaml
+templates
+
+helm upgrade --install --values values-dev.yaml backend .
+
+ArgoCD is a deployment tool to deploy applications into kuberentes cluster, maintain the kuberentes cluster..
+1. Maintain the cluster
+2. Deploy the applications
+
+Advantages
+==========
+1. no need to install extra tools like kubectl
+2. no need to provide authentication to jenkins
+3. GitOps --> Git as a single source of truth.
+We need to manually push the YAML files.
+4. ArgoCD can track the changes in git repos and actively sync into kuberentes cluster.
+5. revert to old version. if application is failed, raise another PR to previous PR.
+6. Accidental changes in EKS cluster, will be automatically raise since argocd continously syncing the github repos
+7. clean UI
+
+values-prod.yaml
+image: 1.2.1
+
+EKS
+======
+Admins and DevOpsEngineers
+
+Cluster creation, upgrade, create namespaces, storage classes, pv, drivers(aws load balancer controller)
+
+expense, roboshop namespace, limit ranges
+ebs , efs
+ingress controller
+network policies
+
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
+rm argocd-linux-amd64
+
+argocd admin initial-password -n argocd
+
+everything is application inside argocd. It has source(github), destination is EKS cluster
+
+namespaces/
+storage-classes/
+network-policies/
+drivers/
+
+Recap
+======
+argocd install
+argocd command line install
+argocd login
+everything is application
+	source
+	destination
+	sync options
+
+auto-sync/sync disable
+applied app-of-apps
+
+manually sync
+auto-sync enable
+
+kubectl delete -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+eks load balancer controller
+=============================
+
+

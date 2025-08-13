@@ -1,0 +1,15 @@
+Elastic Logstash Kibana
+========================
+
+ElasticSearch --> Search Engine Database
+
+elastic 8X3uaGXTkF4klGgVT1JC
+
+strcutured semistructured unstructured
+
+59.182.11.99 - - [04/Jun/2025:15:19:34 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" "-"
+
+IP: 59.182.11.99
+Timestamp: 04/Jun/2025:15:19:34 +0000
+Method: GET / HTTP/1.1
+Status: 304

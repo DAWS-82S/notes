@@ -1,0 +1,12 @@
+When new project comes
+DevOps team will have meeting with dev team.. we explain our pipeline features, branching strategy, etc.
+We onboard them into tools
+	Jenkins
+	Kubernetes
+	GitHub Scans
+	Infra creation using terraform ECR repos
+	Repos creation and settings
+	Webhook setup
+We are following jenkins shared library, pipelines are ready they just need to keep one pipeline code max of 15lines that will enable our pipelines automatically. Pipelines will be cloned at run time and will run CICD automatically.
+
+frontend -> API -> backend(cart+catalogue+user)
