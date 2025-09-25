@@ -1,0 +1,13 @@
+terraform cluster creation
+cluster management using argocd
+application deployment argocd
+
+everything in argocd application
+
+source, destination, sync options...
+
+check if already argocd application is running or not
+	if not running apply application.yaml
+create new branch
+if running change values-<env>.yaml imageVersion
+create PR

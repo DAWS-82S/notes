@@ -1,0 +1,48 @@
+GitHub Actions
+=================
+CI tool
+
+Pipeline
+Stages
+Steps
+Master and Node -> where to run pipeline
+Plugins
+shared library -> DRY
+Credentials
+
+options
+environment
+inputs
+post section
+agent
+
+Why GitHub Actions over Jenkins?
+
+Code Test Deploy
+1. If code is in Github, no need to manage another tool for CI
+2. Scanning tools also can be configured along with code in Github. codeQL, Dependabot, secuirty tokens scanning, etc.
+3. Integrations are easy
+4. We can upload somefiles that can be verified and approved in the deployment process
+
+.github/workflows/*.yaml
+
+Workflow -> Pipeline
+
+when or if
+control when the step should run
+
+concurrency
+===============
+options{
+	disableConcurrentBuilds()
+}
+
+parellel and sequential
+==============
+By default GitHub actions run the jobs in parellel
+
+Actions
+==========
+plugins -> frequnetly used things are converted into plugins we use them directly in the pipeline
+
+everything is action in github workflow

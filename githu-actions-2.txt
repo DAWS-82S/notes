@@ -1,0 +1,24 @@
+Github Actions
+================
+Workflow -> List of jobs
+Job -> Pipeline
+Steps -> Stages
+Step -> Stage
+Actions -> Plugins
+Runners -> Nodes
+Reusable workfloes -> Jenkins shared library
+
+output in this job -> passing as input to another job
+
+Sonar Quality gates
+Dependabot
+ECR scan
+DAST
+Unit tests
+
+Integration/functional/smoke/performance tests -> Testing Manager
+
+Delivery Manager
+Client
+
+Trigger PROD
